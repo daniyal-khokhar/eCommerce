@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -8,22 +7,38 @@ import { CartComponent } from './pages/cart/cart.component';
 import { SaleComponent } from './pages/sale/sale.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserlistComponent } from './userlist/userlist.component';
+import { UserformComponent } from './userform/userform.component';
+import { ToastrModule } from 'ngx-toastr';
+import { UserService } from './user.service';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CartComponent,
-    SaleComponent
+    SaleComponent,
+    UserlistComponent,
+    UserformComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule, 
+    ToastrModule.forRoot(),
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
   ],
-  providers: [],
+  providers: [
+    UserService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

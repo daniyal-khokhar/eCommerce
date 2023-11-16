@@ -1,0 +1,54 @@
+<div  id="addNewUser" tabindex="-1" aria-labelledby="add-new-userLabel" aria-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
+    <div>
+        <div class="pop-up-bg">
+            <h4>Add New User</h4>
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="fName" class="form-label">First Name</label>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="fName" formControlName="fName"
+                                [ngClass]="{ 'is-invalid': fName?.invalid && fName?.touched }">
+                            <div class="invalid-feedback" *ngIf="fName && fName.invalid && fName.touched">
+                                {{ fNameError() }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="lName" class="form-label">Last Name</label>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="lName" formControlName="lName"
+                                [ngClass]="{ 'is-invalid': lName?.invalid && lName?.touched }">
+                            <div class="invalid-feedback" *ngIf="lName && lName.invalid && lName.touched">
+                                {{ lNameError() }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="basic-url" class="form-label">Email</label>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="email" formControlName="email"
+                                [ngClass]="{ 'is-invalid': email?.invalid && email?.touched }">
+                            <div class="invalid-feedback" *ngIf="email && email.invalid && email.touched">
+                                {{ EmailError() }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" formControlName="password"
+                                [ngClass]="{ 'is-invalid': password?.invalid && password?.touched }">
+                            <div class="invalid-feedback" *ngIf="password && password.invalid && password.touched">
+                                {{ passwordError() }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3 me-2"
+                >Save</button>
+                <button type="button" class="btn btn-primary mt-3">Close</button>
+            </form>
+        </div>
+    </div>
+</div>
