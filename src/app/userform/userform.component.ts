@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-import {  OnInit  } from '@angular/core';
+import { Component  , OnInit } from '@angular/core';
 import { Validators, FormControl, FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../user.service';
 interface User {
-  fName: string;
-  lName: string;
+  id: number;
+  firstName: string;
+  lastName: string;
   email: string;
   password: string;
 }
@@ -17,41 +16,29 @@ interface User {
   styleUrls: ['./userform.component.css']
 })
 export class UserformComponent implements OnInit {
-  user: User = { fName: '', lName: '', email: '', password: '' }; 
   userList: User[] = [];
-  constructor(private formBuilder: FormBuilder , 
-    private router: Router, private toastr: ToastrService
-    , private userService: UserService) {}
+
+  constructor(private formBuilder: FormBuilder, 
+    private userService: UserService,
+    private router: Router) {}
 
 
   userForm = new FormGroup({
     fName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]),
     lName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]),
     email: new FormControl('', [Validators.required, Validators.email,]),
-    // status: new FormControl('', [Validators.required,]),
-    // expiry: new FormControl('', [Validators.required,]),
-     password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(8)]),
   });
   
- 
+
   ngOnInit(): void {
-    // this.fetchUserList();
     const storedData = localStorage.getItem('formData');
     this.userList = storedData ? JSON.parse(storedData) : [];
-
-  // Retrieve the selected user from the UserService
+    
     const selectedUser = this.userService.getSelectedUser();
-
-  // Check if there's a selected user
-  if (selectedUser) {
-    // Set the selected user to the component's user property
-    this.user = { ...selectedUser };
-    // Set the form values based on the selected user
-    this.userForm.patchValue(selectedUser);
-  } else {
-    // If there's no selected user, you may want to handle this case
-    console.error('No selected user found.');
-  }
+    if (selectedUser.id !== 0) {
+      this.userForm.patchValue(selectedUser);
+    }
   }
 
   onSubmit(): void {
@@ -59,37 +46,27 @@ export class UserformComponent implements OnInit {
       this.userForm.markAllAsTouched();
       return;
     }
+    let currentDate = new Date();
   
-    const formData: any = this.userForm.value;
+    const formData: User = this.userForm.value as User;
+    formData.id = currentDate.getMinutes() + currentDate.getSeconds();
     const selectedUser = this.userService.getSelectedUser();
-  
-    if (selectedUser) {
-      const index = this.userList.findIndex(user => user.email === selectedUser.email);
-  
+    console.log(selectedUser.id);
+    
+    if (selectedUser.id !== 0) {
+      const index = this.userList.findIndex((user) => user.id === selectedUser.id);
       if (index !== -1) {
-        // Update existing user in the list
-        this.userList[index] = { ...selectedUser, ...formData };
+        this.userList[index] = formData;
       }
     } else {
-      // Add new user to the list
       this.userList.push(formData);
     }
   
-    // Save the updated user list to localStorage
     localStorage.setItem('formData', JSON.stringify(this.userList));
-  
-    // Display success message and navigate
-    this.toastr.success('User saved successfully', 'Success');
-    this.router.navigate(['/userlist']);
-  
-    // Reset the form and fetch the updated user list
     this.userForm.reset();
-    this.fetchUserList();
-  }
- 
-  fetchUserList(): void {
-    const storedData = localStorage.getItem('formData');
-    this.userList = storedData ? JSON.parse(storedData) : [];
+  
+    this.userService.setSelectedUser({ id: 0, fName: '', lName: '', email: '', password: '' });  
+    this.router.navigate(['/userlist']);
   }
   fNameError() {
     return this.userForm.controls.fName.hasError('required') ? 'First Name is required' :
@@ -107,12 +84,10 @@ export class UserformComponent implements OnInit {
     return this.userForm.controls.email.hasError('required') ? 'Email is required' :
       this.userForm.controls.email.hasError('email') ? 'Invalid email format' : '';
   }
-
   passwordError() {
     return this.userForm.controls.password.hasError('required') ? 'Password is required' :
       this.userForm.controls.password.hasError('minLength') ? 'Password should be greater then 8 characters' : '';
   }
-
 
   get fName() {
     return this.userForm.get('fName');
@@ -126,19 +101,8 @@ export class UserformComponent implements OnInit {
     return this.userForm.get('email');
   }
 
- 
   get password() {
     return this.userForm.get('password');
   }
 
-
-  // showToaster(message: string, duration: number = 3000) {
-  //   this.toasterVisible = true;
-
-  //   setTimeout(() => {
-  //     this.toasterVisible = false;
-  //   }, duration);
-  // }
 }
-
-

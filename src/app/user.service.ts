@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface User {
+  id: number;
   fName: string;
   lName: string;
   email: string;
@@ -11,7 +13,8 @@ interface User {
   providedIn: 'root',
 })
 export class UserService {
-  private selectedUser: User = { fName: '', lName: '', email: '', password: '' }; // Initialize with default values
+  private selectedUser: User = { id: 0, fName: '', lName: '', email: '', password: '' }; 
+  constructor(private router: Router) {}
 
   getSelectedUser(): User {
     return this.selectedUser;
@@ -19,5 +22,10 @@ export class UserService {
 
   setSelectedUser(user: User): void {
     this.selectedUser = user;
+  }
+
+  editUser(user: User): void {
+    this.router.navigate(['/userform'], { state: { userId: user.id } });
+    this.setSelectedUser(user);
   }
 }
