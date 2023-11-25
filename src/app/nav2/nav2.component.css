@@ -1,0 +1,30 @@
+
+.navbar {
+    background: linear-gradient(to right, #171817, #7d7d7d); 
+}
+.navbar .navbar-brand{
+    font-size: 30px;
+    font-weight: 800;
+    font-weight: bolder;
+   color: white;
+}
+.navbar .navbar-brand:hover{
+ color: white;
+}
+.navbar .nav-link{
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+}
+.navbar .nav-link:hover{
+    color: #ffc107;;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+.navbar-toggler-icon{
+    background-color: #090101;
+    color: #ece1e1;
+}
+

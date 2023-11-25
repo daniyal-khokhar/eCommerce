@@ -12,6 +12,8 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { UserformComponent } from './userform/userform.component';
 import { ToastrModule } from 'ngx-toastr';
 import { UserService } from './user.service';
+import { Nav1Component } from './nav1/nav1.component';
+import { Nav2Component } from './nav2/nav2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,8 @@ import { UserService } from './user.service';
     SaleComponent,
     UserlistComponent,
     UserformComponent,
+    Nav1Component,
+    Nav2Component,
     
   ],
   imports: [

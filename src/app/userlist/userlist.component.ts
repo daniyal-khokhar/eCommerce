@@ -26,14 +26,14 @@ export class UserlistComponent implements OnInit {
     ngOnInit(): void {
     this.fetchUserList();
     }
-    
+
   fetchUserList(): void {
     const storedData = localStorage.getItem('formData');
     this.userList = storedData ? JSON.parse(storedData) : [];
   }
   deleteUser(id: number): void {
     const index = this.userList.findIndex((user) => user.id === id);
-    if (index !== 1) {
+    if (index !== -1) {
       this.userList.splice(index, 1);
       this.saveUserListToLocalStorage();
     }

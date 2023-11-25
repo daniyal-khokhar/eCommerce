@@ -5,6 +5,8 @@ import { CartComponent } from './pages/cart/cart.component';
 import { SaleComponent } from './pages/sale/sale.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { UserformComponent } from './userform/userform.component';
+import { Nav1Component } from './nav1/nav1.component';
+import { Nav2Component } from './nav2/nav2.component';
 
 const routes: Routes = [
   {
@@ -30,9 +32,16 @@ const routes: Routes = [
   {
     path: "userlist",
     component: UserlistComponent
-  }
-];
-
+  },
+  {
+    path: "nav1",
+    component: Nav1Component
+  },
+  {
+    path: "nav2",
+    component:Nav2Component
+  },
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -16,12 +16,12 @@ interface User {
   styleUrls: ['./userform.component.css']
 })
 export class UserformComponent implements OnInit {
-  userList: User[] = [];
 
-  constructor(private formBuilder: FormBuilder, 
+  constructor(
     private userService: UserService,
-    private router: Router) {}
+    private router: Router ) {}
 
+    userList: User[] = [];
 
   userForm = new FormGroup({
     fName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]),
@@ -30,7 +30,6 @@ export class UserformComponent implements OnInit {
     password: new FormControl('', [Validators.required, Validators.minLength(8)]),
   });
   
-
   ngOnInit(): void {
     const storedData = localStorage.getItem('formData');
     this.userList = storedData ? JSON.parse(storedData) : [];
@@ -50,6 +49,7 @@ export class UserformComponent implements OnInit {
   
     const formData: User = this.userForm.value as User;
     formData.id = currentDate.getMinutes() + currentDate.getSeconds();
+
     const selectedUser = this.userService.getSelectedUser();
     console.log(selectedUser.id);
     

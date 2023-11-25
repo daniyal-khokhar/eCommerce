@@ -1,0 +1,24 @@
+.serach-border{
+    border: none;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid rgb(253, 247, 247);
+}
+
+
+.serach-border::placeholder {
+    color: white;
+}
+.search-border {
+    border: 1px solid #ced4da; /* Default border style */
+}
+
+.search-border:focus {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 10px solid rgb(253, 247, 247);
+    /* border: none; Remove border on focus */
+    /* outline: none; Remove outline on focus */
+}

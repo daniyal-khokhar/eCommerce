@@ -1,13 +1,6 @@
-.toast-success {
-    background-color: #4caf50; /* Background color for success toasts */
-    color: #fff; /* Text color for success toasts */
-  }
-  
-  /* Optionally, you can style the title and message separately */
-  .toast-success .toast-title {
-    font-weight: bold;
-  }
-  
-  .toast-success .toast-message {
-    font-style: italic;
-  }
+.bg-color{
+  background-color: rgb(45, 45, 90);
+  color: white;
+  height: 100%;
+  width: 100%;
+}

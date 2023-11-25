@@ -1,7 +1,6 @@
-<div  id="addNewUser" tabindex="-1" aria-labelledby="add-new-userLabel" aria-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
-    <div>
-        <div class="pop-up-bg">
-            <h4>Add New User</h4>
+    
+        <div class="container bg-color mt-2 mb-5">
+            <h4 class="text-center pt-5">Add New User</h4>
             <form [formGroup]="userForm" (ngSubmit)="onSubmit()" autocomplete="off">
                 <div class="row">
                     <div class="col-12">
@@ -45,9 +44,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="pb-5">
                 <button type="submit" class="btn btn-primary mt-3 me-2">Save</button>
                 <button type="button" class="btn btn-primary mt-3">Close</button>
+                </div>
             </form>
         </div>
-    </div>
-</div>
+    
+
