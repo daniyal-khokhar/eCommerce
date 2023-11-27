@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { ProductService } from './services/product.service';
-// import { Router } from '@angular/router';
+import { SearchService } from './search.service';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +16,16 @@ export class AppComponent implements OnInit {
       // this.loadCart();
     // })
   
+    searchText: string = '';
 
-  ngOnInit(): void {
-    // this.loadCart();
-  }
+    constructor(private searchService: SearchService) {}
+  
+    ngOnInit(): void {}
+  
+    onSearchChange(): void {
+      this.searchService.setSearchText(this.searchText);
+    }
+
   // redirectToSale() {
   //   this.router.navigateByUrl("/sale");
   // }

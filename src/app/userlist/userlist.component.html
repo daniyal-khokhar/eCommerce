@@ -5,6 +5,10 @@
       <button class="btn btn-primary" 
       routerLink="/userform">Add New</button>
     </div>
+    <div>
+      <input type="text"  [(ngModel)]="searchText" placeholder="Search">
+      <button (click)="filterUserList()" > Search</button>
+    </div>  
     <div class="table-responsive mt-3">
       <table class="table">
         <thead>
@@ -17,7 +21,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of userList" class="list-item">
+          <tr *ngFor="let user of filteredUserList"  class="list-item">
             <td align="center">{{ user.fName }}</td>
             <td>{{ user.lName }}</td>
             <td>{{ user.email }}</td>
