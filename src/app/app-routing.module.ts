@@ -7,6 +7,8 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { UserformComponent } from './userform/userform.component';
 import { Nav1Component } from './nav1/nav1.component';
 import { Nav2Component } from './nav2/nav2.component';
+import { BlogComponent } from './blog/blog.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {
@@ -40,6 +42,14 @@ const routes: Routes = [
   {
     path: "nav2",
     component:Nav2Component
+  },
+  {
+    path: "blog",
+    component:BlogComponent
+  },
+  {
+    path: "product",
+    component:ProductComponent
   },
 ]
 @NgModule({

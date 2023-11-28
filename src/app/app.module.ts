@@ -14,6 +14,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { UserService } from './user.service';
 import { Nav1Component } from './nav1/nav1.component';
 import { Nav2Component } from './nav2/nav2.component';
+import { BlogComponent } from './blog/blog.component';
+import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,8 @@ import { Nav2Component } from './nav2/nav2.component';
     UserformComponent,
     Nav1Component,
     Nav2Component,
+    BlogComponent,
+    ProductComponent,
     
   ],
   imports: [

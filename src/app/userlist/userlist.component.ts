@@ -17,8 +17,9 @@ interface User {
   styleUrls: ['./userlist.component.css']
 })
 export class UserlistComponent implements OnInit {
-  userList: User[] = [];
-  filteredUserList: User[] = [];
+
+  userList: any[] = [];
+  filteredUserList: any[] = [];
   searchText: string = '';
 
   constructor(
@@ -39,7 +40,9 @@ export class UserlistComponent implements OnInit {
 
   filterUserList() {
     this.filteredUserList = this.userList.filter((user) =>
-      user.fName.toLowerCase().includes(this.searchText.toLowerCase()) 
+      user.fName.toLowerCase().includes(this.searchText.toLowerCase()) ||
+      user.lName.toLowerCase().includes(this.searchText.toLowerCase()) ||
+      user.email.toLowerCase().includes(this.searchText.toLowerCase()) 
     );
   }
 
@@ -48,12 +51,16 @@ export class UserlistComponent implements OnInit {
     const storedData = localStorage.getItem('formData');
     this.userList = storedData ? JSON.parse(storedData) : [];
   }
-
+  
   deleteUser(id: number): void {
     const index = this.userList.findIndex((user) => user.id === id);
+  
     if (index !== -1) {
       this.userList.splice(index, 1);
-      this.saveUserListToLocalStorage();
+      this.saveUser();
+      console.log('User deleted:', id);
+    } else {
+      console.log('User not found for deletion:', id);
     }
   }
 
@@ -63,12 +70,12 @@ export class UserlistComponent implements OnInit {
 
     if (index !== -1) {
       this.userList[index] = user;
-      this.saveUserListToLocalStorage();
+      this.saveUser();
     }
     this.userService.editUser(user);
   }
 
-  private saveUserListToLocalStorage(): void {
+  private saveUser(): void {
     localStorage.setItem('formData', JSON.stringify(this.userList));
   }
 }
