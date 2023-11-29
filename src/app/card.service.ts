@@ -1,71 +1,122 @@
 import { Injectable } from '@angular/core';
-
+import { Tag } from './shared/Tag';
+import { Cards } from './shared/food';
 @Injectable({
   providedIn: 'root'
 })
 export class CardService {
-  getCards(): any[] {
+  getAllCardsByTag(tag: string): Cards[] {
+    return tag.toLowerCase() === "All"
+      ? this.getCards()
+      : this.getCards().filter((Card) =>
+          Card.tags?.includes(tag.toLowerCase())
+        );
+  }
+    getAllTag():Tag[]{
+        return [
+          {name: "All", count:20},
+          {name: "Woman", count:4},
+          {name: "Man", count:5},
+          {name: "Child", count:4},
+        //   {name: "Soup", count:5},
+        //   {name: "Burgur", count:3},
+    
+        ]
+      }
+  getCards(): Cards[] {
     return [
       {
+       
+        name:"test",
         imgSrc: '../../assets/testimonial1.png',
-        title: 'Card 1 Title',
-        text: 'Description for Card 1.',
-        buttonText: 'Button 1',
+        title: 'new member',
+        category:"woman",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Woman"]
       },
       {
+        name:"test",
         imgSrc: '../../assets/testimonial2.png',
-        title: 'Card 2 Title',
-        text: 'Description for Card 2.',
-        buttonText: 'Button 2',
+        title: 'new member',
+        category:"man",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Man"]
       },
       {
+        name:"test",
         imgSrc: '../../assets/testimonial3.png',
-        title: 'Card 3 Title',
-        text: 'Description for Card 3.',
-        buttonText: 'Button 3',
+        title: 'new member',
+        category:"woman",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Woman"]
       },
       {
+        name:"test",
         imgSrc: '../../assets/testimonial1.png',
-        title: 'Card 4 Title',
-        text: 'Description for Card 4.',
-        buttonText: 'Button 4',
+        title: 'new member',
+        category:"woman",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Woman"]
       },
       {
+        name:"test",
         imgSrc: '../../assets/testimonial2.png',
-        title: 'Card 5 Title',
-        text: 'Description for Card 5.',
-        buttonText: 'Button 5',
+        title: 'new member',
+        category:"man",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Man"]
       },
       {
+        name:"test",
         imgSrc: '../../assets/testimonial3.png',
-        title: 'Card 6 Title',
-        text: 'Description for Card 6.',
-        buttonText: 'Button 6',
+        title: 'new member',
+        category:"woman",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Woman"]
       },
       {
+        name:"test",
         imgSrc: '../../assets/testimonial3.png',
-        title: 'Card 6 Title',
-        text: 'Description for Card 6.',
-        buttonText: 'Button 6',
+        title: 'new member',
+        category:"woman",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Woman"]
       } ,
        {
-        imgSrc: '../../assets/child.png',
-        title: 'Card 6 Title',
-        text: 'Description for Card 6.',
-        buttonText: 'Button 6',
+        name:"test",
+        imgSrc: '../../assets/child.jpg',
+        title: 'new member',
+        category:"child",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Child"]
       },
         {
-        imgSrc: '../../assets/child1.png',
-        title: 'Card 6 Title',
-        text: 'Description for Card 6.',
-        buttonText: 'Button 6',
+        name:"test",
+          imgSrc: '../../assets/child2.jpeg',
+        title: 'new member',
+        category:"child",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Child"]
       },
       {
-        imgSrc: '../../assets/child2.png',
-        title: 'Card 6 Title',
-        text: 'Description for Card 6.',
-        buttonText: 'Button 6',
+        name:"test",
+        imgSrc: '../../assets/child3.jpeg',
+        title: 'new member',
+        category:"child",
+        text: 'Description for Card.',
+        buttonText: 'Add',
+        tags:["Child"]
       }
     ];
   }
+
 }
