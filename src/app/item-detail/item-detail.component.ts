@@ -21,4 +21,5 @@ export class ItemDetailComponent implements OnInit {
       this.card = this.cardService.getCards().find(card => card.id === id.toString());
     });
   }
+  
 }

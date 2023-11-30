@@ -2,7 +2,6 @@
   <div class="tag" *ngIf="tags">
     <a *ngFor="let tag of tags" [routerLink]="['/product/tag', tag.name]">   
       {{tag.name}}({{tag.count}})
-  <img src="../../assets/child.jpg" class="h-10 w-10">
     </a>
   </div>
 </div>
