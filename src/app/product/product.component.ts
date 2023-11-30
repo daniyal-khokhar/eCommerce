@@ -16,18 +16,17 @@ export class ProductComponent implements OnInit {
   constructor(private cardService: CardService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    
     this.tags = this.cardService.getAllTag();
-    this.cards = this.cardService.getCards();
-
     this.route.params.subscribe(params => {
-      const tag = params['tag']; // Use 'tag', not 'tag.Name'
+      const tag = params['tag'];
       
       if (tag) {
         this.cards = this.cardService.getAllCardsByTag(tag);
       } else {
-        this.cards = this.cardService.getCards();
+      this.tags = this.cardService.getAllTag();
+
       }
     });
-    this.tags = this.cardService.getAllTag();
   }
 }

@@ -16,6 +16,7 @@ import { Nav1Component } from './nav1/nav1.component';
 import { Nav2Component } from './nav2/nav2.component';
 import { BlogComponent } from './blog/blog.component';
 import { ProductComponent } from './product/product.component';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { ProductComponent } from './product/product.component';
     Nav2Component,
     BlogComponent,
     ProductComponent,
+    ItemDetailComponent,
     
   ],
   imports: [

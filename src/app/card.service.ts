@@ -5,118 +5,199 @@ import { Cards } from './shared/food';
   providedIn: 'root'
 })
 export class CardService {
+ 
   getAllCardsByTag(tag: string): Cards[] {
-    return tag.toLowerCase() === "All"
-      ? this.getCards()
-      : this.getCards().filter((Card) =>
-          Card.tags?.includes(tag.toLowerCase())
-        );
+    return tag.toLowerCase() === "all" ? this.getCards()
+      : this.getCards().filter((card) =>
+        card.tags?.includes(tag.toLowerCase())
+      );
   }
-    getAllTag():Tag[]{
-        return [
-          {name: "All", count:20},
-          {name: "Woman", count:4},
-          {name: "Man", count:5},
-          {name: "Child", count:4},
-        //   {name: "Soup", count:5},
-        //   {name: "Burgur", count:3},
-    
-        ]
-      }
+
+  getAllTag(): Tag[] {
+    return [
+      { name: "all", count: 20 },
+      { name: "woman", count: 4 },
+      { name: "man", count: 5 },
+      { name: "child", count: 4 },
+    ];
+  }
+
   getCards(): Cards[] {
     return [
-      {
-       
-        name:"test",
-        imgSrc: '../../assets/testimonial1.png',
-        title: 'new member',
-        category:"woman",
-        text: 'Description for Card.',
-        buttonText: 'Add',
-        tags:["Woman"]
-      },
-      {
-        name:"test",
-        imgSrc: '../../assets/testimonial2.png',
+     
+      { 
+        id: '2',     
+        name:"Genuine Shaving Machine",
+        imgSrc: '../../assets/man14.jpg',
+        price:"92.00$",
         title: 'new member',
         category:"man",
-        text: 'Description for Card.',
+        text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
-        tags:["Man"]
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["man"]
       },
-      {
-        name:"test",
-        imgSrc: '../../assets/testimonial3.png',
-        title: 'new member',
-        category:"woman",
-        text: 'Description for Card.',
-        buttonText: 'Add',
-        tags:["Woman"]
-      },
-      {
-        name:"test",
-        imgSrc: '../../assets/testimonial1.png',
-        title: 'new member',
-        category:"woman",
-        text: 'Description for Card.',
-        buttonText: 'Add',
-        tags:["Woman"]
-      },
-      {
-        name:"test",
-        imgSrc: '../../assets/testimonial2.png',
+      { 
+        id: '3',     
+        name:"Hand Phones Genuine",
+        imgSrc: '../../assets/man13.jpg',
+        price:"92.00$",
         title: 'new member',
         category:"man",
-        text: 'Description for Card.',
+        text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
-        tags:["Man"]
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["man"]
       },
       {
-        name:"test",
-        imgSrc: '../../assets/testimonial3.png',
+        id:"4",
+        name:"Tan-Brown Ear Birds",
+        imgSrc: '../../assets/man12.jpg',
+        price:"92.00$",
         title: 'new member',
-        category:"woman",
-        text: 'Description for Card.',
+        category:"man",
+        text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
-        tags:["Woman"]
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["man"]
       },
       {
-        name:"test",
-        imgSrc: '../../assets/testimonial3.png',
+        id:"5",
+        name:"Coat Tony Porfume",
+        imgSrc: '../../assets/fashion1.jpg',
+        price:"92.00$",
         title: 'new member',
         category:"woman",
-        text: 'Description for Card.',
+        text: '(SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
-        tags:["Woman"]
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["woman"]
+      },
+      {
+        id:"8",
+        name:"Trust Creame for ladies",
+        imgSrc: '../../assets/fashion3.jpg',
+        price:"92.00$",
+        title: 'new member',
+        category:"woman",
+        text: 'DISPATCH) Delivery time 2 to 4 Working Days.',
+        buttonText: 'Add',
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["woman"]
+      },
+      {
+        id:"6",
+        name:"Sadoer soup ",
+        imgSrc: '../../assets/fashion2.jpg',
+        price:"92.00$",
+        title: 'new member',
+        category:"woman",
+        text: 'Coat Wallet Delivery time 2 to 4 Working Days.',
+        buttonText: 'Add',
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["woman"]
+      },
+      { 
+        id: '1',     
+        name:"Make LipStik",
+        imgSrc: '../../assets/fashion4.jpg',
+        price:"92.00$",
+        title: 'new member',
+        category:"woman",
+        text: 'Coat time 2 to 4 Working Days. Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days  srtkhfksdlk jdshjksjoi Coat Wallet for Men (SAME)',
+        buttonText: 'Add',
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["woman"]
+      },
+      {
+        id:"7",
+        name:"Black Pods 12",
+        imgSrc: '../../assets/man11.jpg',
+        price:"92.00$",
+        title: 'new member',
+        category:"man",
+        text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
+        buttonText: 'Add',
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["man"]
+      },
+    
+      {
+        id:"9",
+        name:"Best MOM Ever",
+        imgSrc: '../../assets/fashion5.jpg',
+        price:"92.00$",
+        title: 'new member',
+        category:"woman",
+        text: 'For WoMen (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
+        buttonText: 'Add',
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["woman"]
       } ,
        {
-        name:"test",
-        imgSrc: '../../assets/child.jpg',
+        id:"10",
+        name:"Toys for child",
+        imgSrc: '../../assets/baby3.jpeg',
+        price:"92.00$",
         title: 'new member',
         category:"child",
-        text: 'Description for Card.',
+        text: 'Coat Wallet for Baby (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
-        tags:["Child"]
-      },
-        {
-        name:"test",
-          imgSrc: '../../assets/child2.jpeg',
-        title: 'new member',
-        category:"child",
-        text: 'Description for Card.',
-        buttonText: 'Add',
-        tags:["Child"]
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["child"]
       },
       {
-        name:"test",
-        imgSrc: '../../assets/child3.jpeg',
+        id:"14",
+        name:"Baby SpiderMan Suit",
+        imgSrc: '../../assets/baby2.webp',
+        price:"92.00$",
+        title: 'new product',
+        category:"child",
+        text: 'this is new stock available.',
+        buttonText: 'Add',
+        information : '9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino ' ,
+        tags:["child"]
+      },        
+      {       
+        id:"11",
+        name:"Baby Toy",
+        imgSrc: '../../assets/baby4.jpeg',
+        price:"92.00$",
         title: 'new member',
         category:"child",
-        text: 'Description for Card.',
+        text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
-        tags:["Child"]
-      }
+        information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
+        tags:["child"]
+      },
+      {
+        id:"12",
+        name:"Toys",
+        imgSrc: '../../assets/baby5.jpeg',
+        price:"92.00$",
+        title: 'new product',
+        category:"child",
+        text: 'this is new stock available. Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days hfhhhfhfhfhf hxzkjdshkj sdjkhsjhfs',
+        buttonText: 'Add',
+        information :'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino ',
+         tags:["child"]
+      },
+      {
+        id:"13",
+        name:"Baby Diapers",
+        imgSrc: '../../assets/baby1.jpg',
+        price:"92.00$",
+        title: 'new product',
+        category:"child",
+        text: 'this is new stock available. ',
+        buttonText: 'Add',
+        information: '9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino',
+        tags:["child"]
+      },
+   
+
     ];
+    
   }
 
 }

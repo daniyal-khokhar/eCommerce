@@ -1,5 +1,10 @@
-<div class="tag" *ngIf="tags">
-  <a *ngFor="let tag of tags" [routerLink]="['/product/tags', tag.name]">{{tag.name}}({{tag.count}})</a>
+<div>
+  <div class="tag" *ngIf="tags">
+    <a *ngFor="let tag of tags" [routerLink]="['/product/tag', tag.name]">   
+      {{tag.name}}({{tag.count}})
+  <img src="../../assets/child.jpg" class="h-10 w-10">
+    </a>
+  </div>
 </div>
 
 <div class="container-fluid card-bg">
@@ -7,10 +12,27 @@
     <div class="row">  
         <div class="col-lg-4 pt-4" *ngFor="let card of cards">
           <div class="card-body card mb-4">
-            <img [src]="card.imgSrc" class="card-img-top" alt="Card Image">
+            <img [src]="card.imgSrc" class="card-img-top mb-2" alt="Card Image">
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-start">
+              <i class="fa fa-star fa-1x me-1"></i>
+              <i class="fa fa-star fa-1x me-1"></i>
+              <i class="fa fa-star fa-1x me-1"></i>
+              <i class="fa fa-star fa-1x me-1"></i>
+              <i class="fa fa-star-half fa-1x"></i>
+              <p class="mt-0">
+                <strong>Reviews</strong>
+              </p>
+            </div>
+            <!-- <p class="card-text">{{ card.category }}</p> -->
+            <strong>
+            <p class="card-text">{{ card.price }}</p>
+            <p class="card-text">{{ card.name }}</p>
+            </strong>
             <p class="card-text">{{ card.text }}</p>
-            <p class="card-text">{{ card.category }}</p>
-            <a href="#" class="btn btn-primary">{{ card.buttonText }}</a>
+
+            <!-- <p class="card-text">Category {{ card.tags }}</p> -->
+            <a [routerLink]="['/product/item-detail', card.id, card.tags?.['0']]" class="btn btn-sm btn-primary">{{ card.buttonText }}</a>
+            <!-- <a [routerLink]="['/product/item-detail', card.id, card.tags?.[0] || 'defaultTag']" class="btn btn-sm nbtn-primary">{{ card.buttonText }}</a> -->
           </div>
         </div>
       </div>

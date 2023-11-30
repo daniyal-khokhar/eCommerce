@@ -10,6 +10,7 @@ import { Nav2Component } from './nav2/nav2.component';
 import { BlogComponent } from './blog/blog.component';
 import { ProductComponent } from './product/product.component';
 import { Tag } from './shared/Tag';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 const routes: Routes = [
   {
@@ -52,7 +53,10 @@ const routes: Routes = [
     path: "product",
     component:ProductComponent
   },
-  { path: 'product/tags/:tagName', component: ProductComponent }
+  { path: 'product/tag/:tag', component: ProductComponent },
+  // { path: 'product/tags/:tagName', component: ProductComponent }
+  { path: 'product/item-detail/:id/:tag', component: ItemDetailComponent }
+
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
