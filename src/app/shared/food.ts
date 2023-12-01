@@ -8,6 +8,6 @@ export class Cards{
   category!: string;
   information!: string;
   text!: string;
+  relatedimage!:string[];
   buttonText!: string;
- 
 }

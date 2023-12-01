@@ -35,7 +35,9 @@ export class CardService {
         text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["man"]
+        tags:["man"],
+      relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       { 
         id: '3',     
@@ -47,7 +49,9 @@ export class CardService {
         text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["man"]
+        tags:["man"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       {
         id:"4",
@@ -59,7 +63,9 @@ export class CardService {
         text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["man"]
+        tags:["man"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       {
         id:"5",
@@ -71,7 +77,9 @@ export class CardService {
         text: '(SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["woman"]
+        tags:["woman"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       {
         id:"8",
@@ -83,7 +91,9 @@ export class CardService {
         text: 'DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["woman"]
+        tags:["woman"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       {
         id:"6",
@@ -95,7 +105,9 @@ export class CardService {
         text: 'Coat Wallet Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["woman"]
+        tags:["woman"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       { 
         id: '1',     
@@ -107,7 +119,9 @@ export class CardService {
         text: 'Coat time 2 to 4 Working Days. Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days  srtkhfksdlk jdshjksjoi Coat Wallet for Men (SAME)',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["woman"]
+        tags:["woman"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       {
         id:"7",
@@ -119,7 +133,9 @@ export class CardService {
         text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["man"]
+        tags:["man"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
     
       {
@@ -132,7 +148,9 @@ export class CardService {
         text: 'For WoMen (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["woman"]
+        tags:["woman"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       } ,
        {
         id:"10",
@@ -144,7 +162,9 @@ export class CardService {
         text: 'Coat Wallet for Baby (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["child"]
+        tags:["child"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       {
         id:"14",
@@ -156,7 +176,9 @@ export class CardService {
         text: 'this is new stock available.',
         buttonText: 'Add',
         information : '9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino ' ,
-        tags:["child"]
+        tags:["child"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },        
       {       
         id:"11",
@@ -168,7 +190,9 @@ export class CardService {
         text: 'Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days.',
         buttonText: 'Add',
         information:'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino aaa',
-        tags:["child"]
+        tags:["child"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       {
         id:"12",
@@ -180,7 +204,9 @@ export class CardService {
         text: 'this is new stock available. Coat Wallet for Men (SAME DAY DISPATCH) Delivery time 2 to 4 Working Days hfhhhfhfhfhf hxzkjdshkj sdjkhsjhfs',
         buttonText: 'Add',
         information :'9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino ',
-         tags:["child"]
+         tags:["child"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
       {
         id:"13",
@@ -192,7 +218,9 @@ export class CardService {
         text: 'this is new stock available. ',
         buttonText: 'Add',
         information: '9174 Fashion Mens Quartz Watch Luxury Stainless Steel Men Wristwatch Quartz Wristwatches 3Bar Waterproof Bracelet For Mens Relogio Masculino',
-        tags:["child"]
+        tags:["child"],
+        relatedimage: ['1','10','11','12','13','14','2', '3', '4',],
+
       },
    
 

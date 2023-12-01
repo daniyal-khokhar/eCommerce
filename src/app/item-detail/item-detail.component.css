@@ -9,157 +9,18 @@
     background-color: rgb(93, 72, 41);
   }
 .carousel-bg{
-  padding: 50px;
-  background-color: rgb(216, 180, 249);
+  border-radius: 30px;
+  background-color:  rgb(234, 237, 237);;
 }
 
   .img-carousel {
-    height: 50px;
-    width: 50px;
-    background-color: black;
+    height: 80px;
+    width: 80px;
+    background-color:white;
+    padding: 10px;
+    border-radius: 50%;
   }
   .carousel-icon{
-    color: black;
+    color: rgb(16, 2, 2);
     background-color: black;
   }
-/*   
-  .carousel-control-next {
-    background: none !important;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar {
-      margin-right: 0;
-      padding: 10px;
-    }
-  
-    .navbar-brand {
-      margin-left: 0;
-      text-align: center;
-    }
-  
-    .form-inline {
-      margin-right: 0;
-    }
-  
-    .card {
-      background-color: #FFFFFF;
-      border-radius: 15px;
-    }
-  
-    .product-detail .pl-89 {
-      padding: 23px;
-    }
-  
-    .box .pb-60 {
-      padding-bottom: 39px;
-    }
-  
-    .box .pt-59 {
-      padding-top: 37px;
-    }
-  
-    .mt-57 {
-      margin-top: 23px;
-    }
-  }
-  
-  @media (min-width: 350px) {
-    .card {
-      background-color: #FFFFFF;
-      border-radius: 15px;
-    }
-  
-    .product-detail .pl-89 {
-      padding: 23px;
-    }
-  
-    .carousel-item {
-      margin-right: 0;
-      flex: 0 0 25%;
-      display: block;
-    }
-  
-    .carousel-inner {
-      display: flex;
-    }
-  
-    .crousel-card {
-      margin: 0 0.10em;
-      box-shadow: none;
-      border: none;
-    }
-  
-    .crousel-card img {
-      display: flex;
-      width: 20%;
-    }
-  
-    .box .pt-59 {
-      padding-top: 31px;
-    }
-  
-    .mt-37 {
-      margin-top: 27px;
-    }
-  }
-  
-  .carousel-inner {
-    padding: 1em;
-  }
-  
-  .crousel-card {
-    margin: 0 0.5em;
-    box-shadow: none;
-    border: none;
-  }
-  
-  .crousel-card img {
-    width: 100%;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    background-color: #e1e1e1;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 42%;
-    transform: translateY(-50%);
-  }
-  
-  @media (min-width: 768px) {
-    .carousel-item {
-      margin-right: 0;
-      flex: 0 0 25%;
-      display: block;
-    }
-  
-    .carousel-inner {
-      display: flex;
-    }
-  
-    .crousel-card {
-      margin: 0 0.5em;
-      box-shadow: none;
-      border: none;
-    }
-  
-    .crousel-card img {
-      width: 100%;
-    }
-  
-    .product-detail .mt-sm-23 {
-      margin-top: 23px;
-    }
-  
-    .mt-58 {
-      margin-top: 31px;
-    }
-  }
-  
-  .crousel-card .img-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */

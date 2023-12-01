@@ -1,5 +1,4 @@
-<div>
-  <div class="container mt-37">
+  <div class="container mt-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Shop</a></li>
@@ -65,121 +64,17 @@
       </div>
     </div>
   </div>
-</div>
-
-
- <div class="carousel-bg mt-5 mb-5">
+<div class="container-fluid carousel-bg mt-5 mb-5">
   <div class="row">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby2.webp" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
-            </div>
-            <div class="col-md-1 ms-1">
-              <img src="../../assets/baby5.jpeg" class=" img-carousel" alt="...">
+        <div *ngFor="let card of getCards(); let first = first" class="carousel-item" [class.active]="first">
+          <div class="row justify-content-center mt-5">
+            <div *ngFor="let imageId of getRelatedImageIds()" class="col-md-1 ms-1 text-center">
+              <img [src]="getImageSrcById(imageId)" class="rounded-circle img-carousel" alt="...">
+              <p class="mt-1"><strong>
+                Test
+              </strong></p>
             </div>
           </div>
         </div>
@@ -195,3 +90,4 @@
     </div>
   </div>
 </div>
+<!-- <button (click)="onAddToCart()" class="btn btn-primary">Add to Cart</button> -->
